@@ -19,6 +19,15 @@ def signIn(request):
     return render(request,"signIn.html")
     # just simply render the page
 
+def postSignIn(request):
+
+  email = request.POST.get('email')
+  password = request.POST.get('pass')
+
+  user = auth.sign_in_with_email_and_password(email,password)
+
+  return render(request,"welcome.html",{'email':email})
+
 
 
 

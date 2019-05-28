@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sigin</title>
+</head>
+<body>
+<form action="/postSignIn/" method="post">
+{% csrf_token %}
+Email :
+<input type="email" name="email">
+Password:
+<input type="password" name="pass">
+<input type="submit" value="SignIn">
+</form>
+</body>
+</html>
